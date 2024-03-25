@@ -9,7 +9,7 @@ static void thirdTask() {
 	Node<int>* end = NULL;
 
 	int count = 0;
-	cout << "Enter 10 numbers:" << endl;
+	cout << "Enter numbers before their sum will be dividable by their count:" << endl;
 	for (int i = 1; i <= 10; i++)
 	{
 		Node<int>* currentNode = new struct Node<int>;

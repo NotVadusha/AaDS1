@@ -9,7 +9,7 @@ static  void fourthTask() {
 	Node<int>* end = NULL;
 
 	int counter = 0;
-	cout << "Enter 10 numbers:" << endl;
+	cout << "Enter number before count of even number will be 5:" << endl;
 	for (int i = 1; i <= 10; i++)
 	{
 		if (counter == 5) break;
