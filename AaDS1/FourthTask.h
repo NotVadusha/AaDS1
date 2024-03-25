@@ -8,12 +8,19 @@ static  void fourthTask() {
 	Node<int>* currentNode;
 	Node<int>* end = NULL;
 
+	int counter = 0;
 	cout << "Enter 10 numbers:" << endl;
 	for (int i = 1; i <= 10; i++)
 	{
+		if (counter == 5) break;
+
 		Node<int>* currentNode = new struct Node<int>;
 		currentNode->next = NULL;
 		cin >> currentNode->data;
+
+		if (currentNode->data % 2 == 0)
+			counter++;
+
 		if (head == NULL)
 		{
 			head = currentNode;

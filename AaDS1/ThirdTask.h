@@ -3,17 +3,23 @@
 
 using namespace std;
 
-static  void thirdTask() {
+static void thirdTask() {
 	Node<int>* head = NULL;
 	Node<int>* currentNode;
 	Node<int>* end = NULL;
 
+	int count = 0;
 	cout << "Enter 10 numbers:" << endl;
 	for (int i = 1; i <= 10; i++)
 	{
 		Node<int>* currentNode = new struct Node<int>;
 		currentNode->next = NULL;
 		cin >> currentNode->data;
+		count += currentNode->data;
+		if (i != 1) if (count % 2 == 0) {
+			break;
+		}
+
 		if (head == NULL)
 		{
 			head = currentNode;
