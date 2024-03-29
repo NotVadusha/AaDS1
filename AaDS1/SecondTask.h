@@ -32,7 +32,7 @@ static  void secondTask() {
 
 	while (currentNode != NULL)
 	{
-		if (currentNode->data < 0) currentNode->data = 0;
+		if (currentNode->data <= 0) currentNode->data = 0;
 		if (currentNode->data > 0) currentNode->data = 1;
 		currentNode = currentNode->next;
 	}

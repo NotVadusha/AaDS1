@@ -10,15 +10,12 @@ static void thirdTask() {
 
 	int count = 0;
 	cout << "Enter numbers before their sum will be dividable by their count:" << endl;
-	for (int i = 1; i <= 10; i++)
+	for (int i = 1; ;i++)
 	{
 		Node<int>* currentNode = new struct Node<int>;
 		currentNode->next = NULL;
 		cin >> currentNode->data;
 		count += currentNode->data;
-		if (i != 1) if (count % 2 == 0) {
-			break;
-		}
 
 		if (head == NULL)
 		{
@@ -30,17 +27,20 @@ static void thirdTask() {
 			end->next = currentNode;
 			end = currentNode;
 		}
+		if (i != 1) if (count % 2 == 0) {
+			break;
+		}
 	}
 	currentNode = head;
 
 	displayList<int>(head);
 	currentNode = head;
 
-	Node<int>* maxNode = new struct Node<int>;
+	Node<int>* maxNode = head;
 	while (currentNode != NULL)
 	{
 		if (currentNode->data > maxNode->data) maxNode = currentNode;
-		else currentNode = currentNode->next;
+		currentNode = currentNode->next;
 	}
 
 	Node<int>* newElement = new struct Node<int>;
